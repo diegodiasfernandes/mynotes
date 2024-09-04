@@ -8,7 +8,6 @@ import java.util.List;
 public class UserDAO {
     private Connection connection;
 
-    // Constructor
     public UserDAO(Connection connection) {
         this.connection = connection;
     }

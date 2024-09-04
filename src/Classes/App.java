@@ -229,6 +229,7 @@ public class App {
         System.out.println("Type in something to search anywhere on your records:");
         String search = input();
         clearConsole();
+        System.out.println("The following records have '" + search + "' written somewhere:");
         showRecords(recordDAO.getRecordsByUserIdAnywhere(user.getId(), search), true);
     }
     
@@ -236,6 +237,7 @@ public class App {
         System.out.println("Type in something to search on the Title of your records:");
         String search = input();
         clearConsole();
+        System.out.println("The following records have '" + search + "' on the Title:");
         showRecords(recordDAO.getRecordsByUserIdTitle(user.getId(), search), false);
     }
 
@@ -243,6 +245,7 @@ public class App {
         System.out.println("Type in something to search on the Type of your records:");
         String search = input();
         clearConsole();
+        System.out.println("The following records have '" + search + "' on the Type:");
         showRecords(recordDAO.getRecordsByUserIdType(user.getId(), search), false);
     }
 
@@ -250,6 +253,7 @@ public class App {
         System.out.println("Type in a Date, all records since that Date are going to be shown:");
         String search = input();
         clearConsole();
+        System.out.println("These are the records created since : " + search);
         showRecords(recordDAO.getRecordsByUserIdFromDate(user.getId(), search), false);
     }
 
